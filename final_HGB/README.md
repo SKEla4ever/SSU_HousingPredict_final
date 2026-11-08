@@ -43,9 +43,3 @@ These commands write to `outputs/`, `reports/`, `figures/` and `submissions/`. T
 - [HGB model-selection records](reports/hgb_selection/) from the archived experiments referenced in the brief
 - [Random Forest baseline reproduction and results](reports/rf_baseline/README.md)
 - [Round 1 report draft PDF](report/report_draft.pdf) and [LaTeX source](report/report_draft.tex)
-
-## Round 1 hand-in
-
-The [official handout](official/starter/handout.md) specifies **November 8, 2026 at 11:59 p.m. EST**. Fill in the team name, each member's full name, an accessible YouTube URL, and a public or organizer-shared GitHub URL in the LaTeX source. Build the PDF in Overleaf or run `pdflatex report_draft.tex` twice from `report/`. The final PDF may be up to four pages and the video up to five minutes.
-
-Publish the final code and pinned configuration at the GitHub repository root, with both CSVs in `submissions/`. The bundled competition Parquet files are excluded by `.gitignore` and are for local competition use. Submit the completed PDF through the organizers' form.

@@ -1,0 +1,212 @@
+{
+  "control": {
+    "name": "v3_leaf20",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": true,
+      "price_target": "log_ppsf",
+      "market_trend": false
+    },
+    "rolling": {
+      "n": 12169,
+      "mdape": 7.977364882809185,
+      "mape": 10.698678427390478,
+      "median_signed_error": 1.8458289734213509
+    },
+    "fixed": {
+      "n": 16512,
+      "mdape": 8.083065441420235,
+      "mape": 10.955524164242997,
+      "median_signed_error": 2.2143776401945994
+    },
+    "fixed_by_origin": {
+      "2025-04-01T00:00:00": {
+        "n": 8694,
+        "mdape": 8.045990092657481,
+        "mape": 11.037742325589312,
+        "median_signed_error": 2.6374139681826216
+      },
+      "2025-08-01T00:00:00": {
+        "n": 7818,
+        "mdape": 8.123738299569112,
+        "mape": 10.86409353048182,
+        "median_signed_error": 1.8113182353793065
+      }
+    }
+  },
+  "candidate": {
+    "name": "four_condition_flags",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": true,
+      "price_target": "log_ppsf",
+      "market_trend": false,
+      "new_remarks_flags": {
+        "remark_aged_system": "\\b(?:older|old|original|dated|aging|ageing|outdated) (?:furnace|roof|windows|electrical|wiring|plumbing|hvac|mechanicals)\\b",
+        "remark_original_finishes": "\\b(?:original (?:kitchen|bathrooms?|finishes|fixtures|light fixtures)|(?:kitchen|bathrooms?|finishes|fixtures) (?:is|are|remain) original)\\b",
+        "remark_major_repair": "\\b(?:(?:significant|substantial|major|extensive) (?:work|renovations?|updates?|updating|repairs?|tlc)|bring your toolbox|down to (?:the )?studs|needs? (?:a )?(?:full|complete) (?:redo|renovation|overhaul))\\b",
+        "remark_unfinished_basement": "\\bunfinished (?:basement|bsmt)\\b"
+      }
+    },
+    "rolling": {
+      "n": 12169,
+      "mdape": 7.930091552907615,
+      "mape": 10.578007257971706,
+      "median_signed_error": 1.9756706342667787
+    },
+    "fixed": {
+      "n": 16512,
+      "mdape": 8.079807774409698,
+      "mape": 10.779248552437577,
+      "median_signed_error": 2.0625260122095446
+    },
+    "fixed_by_origin": {
+      "2025-04-01T00:00:00": {
+        "n": 8694,
+        "mdape": 8.219941467888134,
+        "mape": 10.968578966657276,
+        "median_signed_error": 2.3648925193790893
+      },
+      "2025-08-01T00:00:00": {
+        "n": 7818,
+        "mdape": 7.953371601056623,
+        "mape": 10.568703832403544,
+        "median_signed_error": 1.7253216881141238
+      }
+    }
+  },
+  "improves_both_mdapes": true,
+  "fixed_subgroups": [
+    {
+      "flag": "remark_aged_system",
+      "subset": "all_flagged",
+      "control": {
+        "n": 766,
+        "mdape": 9.851151779956414,
+        "mape": 14.083877585463894,
+        "median_signed_error": 6.00972976331318
+      },
+      "candidate": {
+        "n": 766,
+        "mdape": 9.018364292696045,
+        "mape": 12.50430845760393,
+        "median_signed_error": 2.933221909149485
+      }
+    },
+    {
+      "flag": "remark_aged_system",
+      "subset": "flagged_without_needs_work",
+      "control": {
+        "n": 415,
+        "mdape": 10.645227453559054,
+        "mape": 15.151829369605213,
+        "median_signed_error": 7.913402898537895
+      },
+      "candidate": {
+        "n": 415,
+        "mdape": 8.49254378608809,
+        "mape": 12.366218077952839,
+        "median_signed_error": 3.3838587430424187
+      }
+    },
+    {
+      "flag": "remark_original_finishes",
+      "subset": "all_flagged",
+      "control": {
+        "n": 3531,
+        "mdape": 8.04806885840491,
+        "mape": 10.729578731332635,
+        "median_signed_error": 3.57131709808613
+      },
+      "candidate": {
+        "n": 3531,
+        "mdape": 7.861625617911058,
+        "mape": 10.166120929940757,
+        "median_signed_error": 1.9822558252029674
+      }
+    },
+    {
+      "flag": "remark_original_finishes",
+      "subset": "flagged_without_needs_work",
+      "control": {
+        "n": 3059,
+        "mdape": 8.084886253862376,
+        "mape": 10.889801700210779,
+        "median_signed_error": 4.074222556703414
+      },
+      "candidate": {
+        "n": 3059,
+        "mdape": 7.936318886628801,
+        "mape": 10.229780765893484,
+        "median_signed_error": 1.9797802199418284
+      }
+    },
+    {
+      "flag": "remark_major_repair",
+      "subset": "all_flagged",
+      "control": {
+        "n": 478,
+        "mdape": 8.958229516534342,
+        "mape": 12.186863405570422,
+        "median_signed_error": 3.758944717504839
+      },
+      "candidate": {
+        "n": 478,
+        "mdape": 8.760128768370924,
+        "mape": 11.57304161521988,
+        "median_signed_error": 3.231339229281498
+      }
+    },
+    {
+      "flag": "remark_major_repair",
+      "subset": "flagged_without_needs_work",
+      "control": {
+        "n": 90,
+        "mdape": 12.538813844443151,
+        "mape": 16.027989214690773,
+        "median_signed_error": 9.575544799566288
+      },
+      "candidate": {
+        "n": 90,
+        "mdape": 8.832027103382018,
+        "mape": 12.13096807287407,
+        "median_signed_error": 4.171768595827935
+      }
+    },
+    {
+      "flag": "remark_unfinished_basement",
+      "subset": "all_flagged",
+      "control": {
+        "n": 208,
+        "mdape": 11.547757492417677,
+        "mape": 13.262905742222092,
+        "median_signed_error": 6.416236401483033
+      },
+      "candidate": {
+        "n": 208,
+        "mdape": 10.035685095986715,
+        "mape": 11.910322491446903,
+        "median_signed_error": 3.1323771608879563
+      }
+    },
+    {
+      "flag": "remark_unfinished_basement",
+      "subset": "flagged_without_needs_work",
+      "control": {
+        "n": 179,
+        "mdape": 11.297534068221067,
+        "mape": 13.436243026886677,
+        "median_signed_error": 9.596870042892567
+      },
+      "candidate": {
+        "n": 179,
+        "mdape": 10.095787452778497,
+        "mape": 12.029667804353693,
+        "median_signed_error": 4.518572286824862
+      }
+    }
+  ],
+  "physical_fits": 7
+}

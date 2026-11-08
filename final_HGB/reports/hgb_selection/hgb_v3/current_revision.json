@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "model_family": "hgb_v3",
+  "track": "off_market",
+  "revision": "hgb_v3_aged_system",
+  "selected_by": "user",
+  "min_samples_leaf": 20,
+  "added_remarks_flags": [
+    "remark_aged_system"
+  ],
+  "activated_utc": "2026-11-07T21:08:36.972454+00:00",
+  "model": {
+    "path": "outputs/hgb_baselines/hgb_v3_aged_system/final_models/off_market.joblib",
+    "sha256": "05ec231e1d64115ba066bb3a7e9c372b88bb637361bffb2a76d9f2e128eba1aa"
+  },
+  "submission": {
+    "path": "submissions/hgb_v3_aged_system/submission_off_market.csv",
+    "sha256": "99cf8b219253e52492ffcec4e0ad74ec0502ef04285014b480fe91d6ed333654"
+  },
+  "release_manifest": {
+    "path": "outputs/hgb_baselines/hgb_v3_aged_system/final_summary.json",
+    "sha256": "a9c930570bb73af48aa3665f940d17707080ab3f2c485d80520002765f66203d"
+  },
+  "previous_revision": {
+    "revision": "hgb_v3",
+    "min_samples_leaf": 20,
+    "manifest_path": "outputs/hgb_baselines/hgb_v3/final_summary.json",
+    "manifest_sha256": "f6fe235a578a5d3c5c6027c11c1e383d98b096a6f69d9beac5cafacdc1349eab"
+  }
+}

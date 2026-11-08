@@ -1,0 +1,563 @@
+{
+  "version": "hgb_v3",
+  "created_utc": "2026-11-07T19:37:33.360110+00:00",
+  "execution_contract_sha256": "af2a9a78400011626439b413bfee2452cb25e3f9dfeeb110fd3dffff420ec68b",
+  "control": {
+    "name": "hgb_v2",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": false,
+      "price_target": "log_price",
+      "market_trend": false
+    },
+    "rolling": {
+      "n": 12169,
+      "mdape": 8.627363342933641,
+      "mape": 11.67529144659385,
+      "median_signed_error": 1.8625230997640645
+    },
+    "fixed": {
+      "n": 16512,
+      "mdape": 8.891884210901654,
+      "mape": 11.925783947812597,
+      "median_signed_error": 2.2210195269114865
+    },
+    "fixed_by_origin": {
+      "2025-04-01T00:00:00": {
+        "n": 8694,
+        "mdape": 8.993012935250427,
+        "mape": 12.078143830360567,
+        "median_signed_error": 2.51016184988109
+      },
+      "2025-08-01T00:00:00": {
+        "n": 7818,
+        "mdape": 8.755123776666995,
+        "mape": 11.756352274894708,
+        "median_signed_error": 1.89100924619183
+      }
+    }
+  },
+  "stages": [
+    {
+      "stage": "regularization_and_truncation",
+      "parent": "hgb_v2",
+      "selected": "hgb_v2",
+      "qualifying": [],
+      "results": [
+        {
+          "name": "v2_truncated_1200",
+          "spec": {
+            "max_iter": 1200,
+            "l2_regularization": 0.0,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.648065860027348,
+            "mape": 11.654238510866273,
+            "median_signed_error": 1.8980980268817915
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.927281987467099,
+            "mape": 11.902663546245792,
+            "median_signed_error": 2.2594054528755274
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 9.036906791875845,
+              "mape": 12.05280806196661,
+              "median_signed_error": 2.5515828609928555
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.813252735513943,
+              "mape": 11.735695470052804,
+              "median_signed_error": 2.001422312696712
+            }
+          }
+        },
+        {
+          "name": "l2_1_i1200",
+          "spec": {
+            "max_iter": 1200,
+            "l2_regularization": 1,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.712397494802149,
+            "mape": 11.677832047083964,
+            "median_signed_error": 1.9335339048302127
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.923647659229726,
+            "mape": 11.986586567999911,
+            "median_signed_error": 2.5034285875446622
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 8.992553651635966,
+              "mape": 12.145205702647793,
+              "median_signed_error": 2.783613624488659
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.827893805717608,
+              "mape": 11.810194299308597,
+              "median_signed_error": 2.286214382034936
+            }
+          }
+        },
+        {
+          "name": "l2_1_i1600",
+          "spec": {
+            "max_iter": 1600,
+            "l2_regularization": 1,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.67288837613139,
+            "mape": 11.694906842863483,
+            "median_signed_error": 1.954252173332551
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.911395044255942,
+            "mape": 11.987718014069474,
+            "median_signed_error": 2.3458085978751146
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 8.952478993627778,
+              "mape": 12.124783277396993,
+              "median_signed_error": 2.522329649936524
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.85286598650481,
+              "mape": 11.835294708956983,
+              "median_signed_error": 2.104418645629877
+            }
+          }
+        },
+        {
+          "name": "l2_1_i2000",
+          "spec": {
+            "max_iter": 2000,
+            "l2_regularization": 1,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.662029017653422,
+            "mape": 11.72079177702136,
+            "median_signed_error": 1.9084633735760406
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.912328140288976,
+            "mape": 12.01444206958317,
+            "median_signed_error": 2.3297290650612483
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 8.97011860563394,
+              "mape": 12.172591642973137,
+              "median_signed_error": 2.583064108454518
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.832831024552124,
+              "mape": 11.838571976074295,
+              "median_signed_error": 2.053906555338026
+            }
+          }
+        },
+        {
+          "name": "l2_1_i2400",
+          "spec": {
+            "max_iter": 2400,
+            "l2_regularization": 1,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.634619864581934,
+            "mape": 11.750416464058299,
+            "median_signed_error": 1.9105824512855265
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.95516977608222,
+            "mape": 12.038584091603443,
+            "median_signed_error": 2.302366756812387
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 8.989803190802721,
+              "mape": 12.200206841252717,
+              "median_signed_error": 2.5348975886941405
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.908593550150576,
+              "mape": 11.858851655500763,
+              "median_signed_error": 2.0455034107717744
+            }
+          }
+        },
+        {
+          "name": "l2_5_i1200",
+          "spec": {
+            "max_iter": 1200,
+            "l2_regularization": 5,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.57007819127046,
+            "mape": 11.616718794447488,
+            "median_signed_error": 1.9215749924686505
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.90041358118437,
+            "mape": 11.937385480764524,
+            "median_signed_error": 2.38600656573096
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 9.001888804678497,
+              "mape": 12.081159481260778,
+              "median_signed_error": 2.5773699632958698
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.798431085445065,
+              "mape": 11.77750173040453,
+              "median_signed_error": 2.1457422699466897
+            }
+          }
+        },
+        {
+          "name": "l2_5_i1600",
+          "spec": {
+            "max_iter": 1600,
+            "l2_regularization": 5,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.602900296593857,
+            "mape": 11.640902959900352,
+            "median_signed_error": 1.939360734855971
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.90319234536149,
+            "mape": 11.954371419057594,
+            "median_signed_error": 2.4087603049550275
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 9.01650935700491,
+              "mape": 12.089627521504392,
+              "median_signed_error": 2.6256822897258583
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.835530719882701,
+              "mape": 11.803959989705785,
+              "median_signed_error": 2.186438160968268
+            }
+          }
+        },
+        {
+          "name": "l2_5_i2000",
+          "spec": {
+            "max_iter": 2000,
+            "l2_regularization": 5,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.558055187440104,
+            "mape": 11.665801954406085,
+            "median_signed_error": 1.9105957764614576
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.945779093048227,
+            "mape": 11.993712612608643,
+            "median_signed_error": 2.35195770516608
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 9.027963080296823,
+              "mape": 12.13766364493075,
+              "median_signed_error": 2.5613824799224396
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.825480487553714,
+              "mape": 11.833631994162953,
+              "median_signed_error": 2.114385831314242
+            }
+          }
+        },
+        {
+          "name": "l2_5_i2400",
+          "spec": {
+            "max_iter": 2400,
+            "l2_regularization": 5,
+            "remarks": false,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.567272249534119,
+            "mape": 11.68639098698469,
+            "median_signed_error": 1.9176185774133674
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.932057416512528,
+            "mape": 11.999167294056674,
+            "median_signed_error": 2.3044858311853718
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 9.019831251211517,
+              "mape": 12.151395690687961,
+              "median_signed_error": 2.5599232666175373
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.820257229749982,
+              "mape": 11.829881839936384,
+              "median_signed_error": 1.9925447667580631
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stage": "remarks_10_flags",
+      "parent": "hgb_v2",
+      "selected": "remarks_10_flags",
+      "qualifying": [
+        "remarks_10_flags"
+      ],
+      "results": [
+        {
+          "name": "remarks_10_flags",
+          "spec": {
+            "max_iter": 1600,
+            "l2_regularization": 0.0,
+            "remarks": true,
+            "price_target": "log_price",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.049532389542295,
+            "mape": 10.703922495536487,
+            "median_signed_error": 1.784605774110825
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.204067232540744,
+            "mape": 10.994004377223343,
+            "median_signed_error": 2.2540590111995646
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 8.2097330637699,
+              "mape": 11.156878448168877,
+              "median_signed_error": 2.7039760044706953
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.19563283029504,
+              "mape": 10.812880410377545,
+              "median_signed_error": 1.7854966664296628
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stage": "log_price_per_sqft",
+      "parent": "remarks_10_flags",
+      "selected": "log_price_per_sqft",
+      "qualifying": [
+        "log_price_per_sqft"
+      ],
+      "results": [
+        {
+          "name": "log_price_per_sqft",
+          "spec": {
+            "max_iter": 1600,
+            "l2_regularization": 0.0,
+            "remarks": true,
+            "price_target": "log_ppsf",
+            "market_trend": false
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 7.977364882809185,
+            "mape": 10.698678427390478,
+            "median_signed_error": 1.8458289734213509
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.083065441420235,
+            "mape": 10.955524164242997,
+            "median_signed_error": 2.2143776401945994
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 8.045990092657481,
+              "mape": 11.037742325589312,
+              "median_signed_error": 2.6374139681826216
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.123738299569112,
+              "mape": 10.86409353048182,
+              "median_signed_error": 1.8113182353793065
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stage": "market_trend_90d",
+      "parent": "log_price_per_sqft",
+      "selected": "log_price_per_sqft",
+      "qualifying": [],
+      "results": [
+        {
+          "name": "market_trend_90d",
+          "spec": {
+            "max_iter": 1600,
+            "l2_regularization": 0.0,
+            "remarks": true,
+            "price_target": "log_ppsf",
+            "market_trend": true
+          },
+          "rolling": {
+            "n": 12169,
+            "mdape": 8.027830665976246,
+            "mape": 10.795614631820976,
+            "median_signed_error": 1.8988901387165593
+          },
+          "fixed": {
+            "n": 16512,
+            "mdape": 8.238383037176057,
+            "mape": 11.131815663614246,
+            "median_signed_error": 2.529042969690085
+          },
+          "fixed_by_origin": {
+            "2025-04-01T00:00:00": {
+              "n": 8694,
+              "mdape": 8.32965921692323,
+              "mape": 11.334996461875672,
+              "median_signed_error": 2.7274690752460193
+            },
+            "2025-08-01T00:00:00": {
+              "n": 7818,
+              "mdape": 8.115426508582901,
+              "mape": 10.905868636230661,
+              "median_signed_error": 2.2661483000644282
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "selected": {
+    "name": "log_price_per_sqft",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": true,
+      "price_target": "log_ppsf",
+      "market_trend": false
+    },
+    "rolling": {
+      "n": 12169,
+      "mdape": 7.977364882809185,
+      "mape": 10.698678427390478,
+      "median_signed_error": 1.8458289734213509
+    },
+    "fixed": {
+      "n": 16512,
+      "mdape": 8.083065441420235,
+      "mape": 10.955524164242997,
+      "median_signed_error": 2.2143776401945994
+    },
+    "fixed_by_origin": {
+      "2025-04-01T00:00:00": {
+        "n": 8694,
+        "mdape": 8.045990092657481,
+        "mape": 11.037742325589312,
+        "median_signed_error": 2.6374139681826216
+      },
+      "2025-08-01T00:00:00": {
+        "n": 7818,
+        "mdape": 8.123738299569112,
+        "mape": 10.86409353048182,
+        "median_signed_error": 1.8113182353793065
+      }
+    }
+  },
+  "development_reference_sha256": {
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-04-01/predictions_1600.csv": "13bd256d04d348c0b686f88c8e6e06beea32c584d3afadf46ff5f1712caba78d",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-06-01/predictions_1600.csv": "f1545e6a2500b287c04345e6c926f829fea387b9b4fc20ff529abc19612c84d1",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-07-01/predictions_1600.csv": "37bcdc04a5dda5e19e4682008478b81d2468012c47aae6188d2baed4058ad49c",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-08-01/predictions_1600.csv": "6fd9f2f52348a7f7fbb0ef364159403403439303c7b84c407d12ed7cacd6e989",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-09-01/predictions_1600.csv": "401f793178d040e15f5ff85caea5d51d4f24e9e9d6bdb12be5c5a3c2af53a602",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-10-01/predictions_1600.csv": "ab34c313aad6c61801d5c19c80198e5512e1ba61ddaa3110a85482ab2da7e3d9",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-11-01/predictions_1600.csv": "4e9297a911b0ea9ae9bb8536f4429baac8b14731f845335e56a15b6de68ae828",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-04-01/predictions_1200.csv": "462df0ee80554e429946e6067e00f8845f9b455860dee217aede486162761ba6",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-06-01/predictions_1200.csv": "2bec3cadeee85a2869a1c8e0cf7567a39b7d134d2c6f1164e6f2c1e9afdc95d3",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-07-01/predictions_1200.csv": "fccec795e47eac4c44b3cf3c90020be316926fa099f0cfa0faab252a3495a047",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-08-01/predictions_1200.csv": "feff207dd4e6b9ae447fa13281dbf25698619b8921e491f5164569fc64135e11",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-09-01/predictions_1200.csv": "c58e1d360a802a438451bcc712e340b7aa15b184f6a3597ca4a9d038f6874793",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-10-01/predictions_1200.csv": "4b505c0bacce23791618c9bfaf884cfdac35d37fa8f616f199d920ea5e294d30",
+    "outputs/hgb_baselines/hgb_v2/physical_runs/stage3_leaves_127/2025-11-01/predictions_1200.csv": "d23756b42dd013a44d59fcc53f0a6769bc74352d061b6596a98dd4b3375e55ba"
+  }
+}

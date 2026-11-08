@@ -1,0 +1,16 @@
+# Data and everything the scripts write
+data/
+outputs/
+reports/
+figures/
+submissions/
+
+# Python and notebook clutter
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+.Rhistory
+report/*.pdf

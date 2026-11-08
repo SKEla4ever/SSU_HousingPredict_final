@@ -1,0 +1,13 @@
+.DS_Store
+.venv/
+__pycache__/
+.pytest_cache/
+data/*.parquet
+data/*.csv
+outputs/*
+!outputs/tree_baselines/
+outputs/tree_baselines/*
+!outputs/tree_baselines/frozen_config.json
+report/*.aux
+report/*.log
+report/*.out

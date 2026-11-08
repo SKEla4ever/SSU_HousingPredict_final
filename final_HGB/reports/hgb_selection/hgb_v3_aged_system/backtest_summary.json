@@ -1,0 +1,73 @@
+{
+  "frozen_config_sha256": "e4fcdf06d46eaaa4eba423c7f2c01e4bee49f696631f2a27f5b2f0b2e85d2c32",
+  "control": {
+    "name": "v3_leaf20",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": true,
+      "price_target": "log_ppsf",
+      "market_trend": false
+    },
+    "rolling": {
+      "n": 10069,
+      "mdape": 7.717835407647409,
+      "mape": 10.351222420052354,
+      "median_signed_error": -0.14131346505473932
+    },
+    "fixed": {
+      "n": 7773,
+      "mdape": 8.334993798474514,
+      "mape": 10.739957824785545,
+      "median_signed_error": -3.0084748986105754
+    },
+    "fixed_by_origin": {
+      "2026-02-01T00:00:00": {
+        "n": 7773,
+        "mdape": 8.334993798474514,
+        "mape": 10.739957824785545,
+        "median_signed_error": -3.0084748986105754
+      }
+    }
+  },
+  "selected": {
+    "name": "hgb_v3_aged_system",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": true,
+      "price_target": "log_ppsf",
+      "market_trend": false,
+      "new_remarks_flags": {
+        "remark_aged_system": "\\b(?:older|old|original|dated|aging|ageing|outdated) (?:furnace|roof|windows|electrical|wiring|plumbing|hvac|mechanicals)\\b"
+      }
+    },
+    "rolling": {
+      "n": 10069,
+      "mdape": 7.640197272094858,
+      "mape": 10.27099439955938,
+      "median_signed_error": -0.11810692965788995
+    },
+    "fixed": {
+      "n": 7773,
+      "mdape": 8.239301159498423,
+      "mape": 10.66144124283498,
+      "median_signed_error": -2.8364790439966607
+    },
+    "fixed_by_origin": {
+      "2026-02-01T00:00:00": {
+        "n": 7773,
+        "mdape": 8.239301159498423,
+        "mape": 10.66144124283498,
+        "median_signed_error": -2.8364790439966607
+      }
+    }
+  },
+  "holdout_previously_observed": true,
+  "improves_both_reused_mdapes": true,
+  "physical_fits": 6,
+  "prediction_sha256": {
+    "outputs/hgb_baselines/hgb_v3_aged_system/reused_rolling_predictions.csv": "858a0a25b8e4a08fdf65a7579cda8684e605dc104a10da2ac4a6e9940f560986",
+    "outputs/hgb_baselines/hgb_v3_aged_system/reused_fixed_predictions.csv": "b6b6f2d839a474f506425953d7629f976d9f6bcc825cc91ae5884488a7f67c1c"
+  }
+}

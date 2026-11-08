@@ -1,0 +1,113 @@
+{
+  "control": {
+    "name": "v3_leaf20",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": true,
+      "price_target": "log_ppsf",
+      "market_trend": false
+    },
+    "rolling": {
+      "n": 12169,
+      "mdape": 7.977364882809185,
+      "mape": 10.698678427390478,
+      "median_signed_error": 1.8458289734213509
+    },
+    "fixed": {
+      "n": 16512,
+      "mdape": 8.083065441420235,
+      "mape": 10.955524164242997,
+      "median_signed_error": 2.2143776401945994
+    },
+    "fixed_by_origin": {
+      "2025-04-01T00:00:00": {
+        "n": 8694,
+        "mdape": 8.045990092657481,
+        "mape": 11.037742325589312,
+        "median_signed_error": 2.6374139681826216
+      },
+      "2025-08-01T00:00:00": {
+        "n": 7818,
+        "mdape": 8.123738299569112,
+        "mape": 10.86409353048182,
+        "median_signed_error": 1.8113182353793065
+      }
+    }
+  },
+  "candidate": {
+    "name": "analysis/run_hgb_v3.py",
+    "spec": {
+      "max_iter": 1600,
+      "l2_regularization": 0.0,
+      "remarks": true,
+      "price_target": "log_ppsf",
+      "market_trend": false,
+      "new_remarks_flags": {
+        "remark_aged_system": "\\b(?:older|old|original|dated|aging|ageing|outdated) (?:furnace|roof|windows|electrical|wiring|plumbing|hvac|mechanicals)\\b"
+      }
+    },
+    "rolling": {
+      "n": 12169,
+      "mdape": 7.908622901342036,
+      "mape": 10.628880192465765,
+      "median_signed_error": 1.8677700063619025
+    },
+    "fixed": {
+      "n": 16512,
+      "mdape": 8.114352877498268,
+      "mape": 10.87220142684896,
+      "median_signed_error": 2.181193803049565
+    },
+    "fixed_by_origin": {
+      "2025-04-01T00:00:00": {
+        "n": 8694,
+        "mdape": 8.092785818787336,
+        "mape": 10.968168314983139,
+        "median_signed_error": 2.6552727516287282
+      },
+      "2025-08-01T00:00:00": {
+        "n": 7818,
+        "mdape": 8.148425008878888,
+        "mape": 10.765481533597672,
+        "median_signed_error": 1.6478052918376278
+      }
+    }
+  },
+  "improves_both_mdapes": false,
+  "fixed_subgroups": [
+    {
+      "flag": "remark_aged_system",
+      "subset": "all_flagged",
+      "control": {
+        "n": 766,
+        "mdape": 9.851151779956414,
+        "mape": 14.083877585463894,
+        "median_signed_error": 6.00972976331318
+      },
+      "candidate": {
+        "n": 766,
+        "mdape": 8.957964101512381,
+        "mape": 12.3740819984173,
+        "median_signed_error": 2.8394913750548634
+      }
+    },
+    {
+      "flag": "remark_aged_system",
+      "subset": "flagged_without_needs_work",
+      "control": {
+        "n": 415,
+        "mdape": 10.645227453559054,
+        "mape": 15.151829369605213,
+        "median_signed_error": 7.913402898537895
+      },
+      "candidate": {
+        "n": 415,
+        "mdape": 8.608654427532231,
+        "mape": 12.120933806279291,
+        "median_signed_error": 3.3895661476331544
+      }
+    }
+  ],
+  "physical_fits": 7
+}

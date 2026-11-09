@@ -115,7 +115,7 @@ In the development comparison, the original v3 leaf20 model already used log PPS
 
 Use **Python 3.12** and install the pinned dependencies in `requirements.txt`. The original Off-market run used macOS arm64 and Python 3.12.5. The core versions are `scikit-learn==1.7.2`, `numpy==2.2.6`, `pandas==2.3.3`, `scipy==1.18.1`, `pyarrow==22.0.0`, `joblib==1.6.0`, and `matplotlib==3.10.9`. Set `OMP_NUM_THREADS=4` and `OPENBLAS_NUM_THREADS=1`, and preserve the original row order in the Parquet files. See [requirements.txt](../requirements.txt) and [README.md](../README.md).
 
-Run the following commands from the `final_HGB` root. Retraining in a temporary copy preserves the CSVs, models, and backtest reports in the handoff package. These commands use the three original Parquet files bundled in the package. If the files are stored elsewhere, set `DATA_DIR` to their directory's absolute path. To download them from the competition dataset repository, unset `DATA_DIR` so the loader reads from `Baliyang/SSU_data_dash`.
+Run the following commands from the `final_HGB` root. Retraining in a temporary copy preserves the CSVs, models, and backtest reports in the handoff package. By default, the loader downloads and caches the three Parquet files from the [organizer's dataset](https://huggingface.co/datasets/Baliyang/SSU_data_dash).
 
 ```sh
 (
@@ -128,7 +128,7 @@ Run the following commands from the `final_HGB` root. Retraining in a temporary 
     python3.12 -m venv "$WORK_DIR/venv"
     . "$WORK_DIR/venv/bin/activate"
     python -m pip install -r requirements.txt
-    export DATA_DIR="$PWD/data"
+    unset DATA_DIR
     export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1
 
     python run.py validate
@@ -137,6 +137,12 @@ Run the following commands from the `final_HGB` root. Retraining in a temporary 
     python run.py check
     shasum -a 256 -c submissions/SHA256SUMS.txt
 )
+```
+
+If you already have all three original Parquet files locally, replace `unset DATA_DIR` inside the block above with:
+
+```sh
+export DATA_DIR="/absolute/path/to/competition_data"
 ```
 
 See the [RF baseline](rf_baseline/README.md) for the Random Forest comparison configuration, results, and reproduction commands.

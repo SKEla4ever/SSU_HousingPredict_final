@@ -15,7 +15,7 @@ From this folder on macOS or Linux, use Python 3.12 and the pinned dependencies.
 python3.12 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
-export DATA_DIR="$PWD/data"
+unset DATA_DIR
 export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1
 
 python run.py validate
@@ -25,7 +25,13 @@ python run.py check
 shasum -a 256 -c submissions/SHA256SUMS.txt
 ```
 
-The local handoff includes the three original competition Parquet files for competition use. You can also point `DATA_DIR` to another copy of those files. If running from a GitHub checkout without the Parquet files, leave `DATA_DIR` unset so the loader can download the [organizer's dataset](https://huggingface.co/datasets/Baliyang/SSU_data_dash). The final-model workflow verifies the Parquet SHA-256 hashes.
+By default, the loader downloads and caches the three Parquet files from the [organizer's dataset](https://huggingface.co/datasets/Baliyang/SSU_data_dash). The final-model workflow verifies their SHA-256 hashes.
+
+If you already have all three original Parquet files locally, replace `unset DATA_DIR` in the block above with:
+
+```sh
+export DATA_DIR="/absolute/path/to/competition_data"
+```
 
 - `validate` refits both tracks for the December 2025–May 2026 walk-forward evaluation and saves the February–May 2026 fixed-origin backtest.
 - `report` computes metrics and the price-decile chart from those backtest predictions.

@@ -109,7 +109,7 @@ These splits measure future-sale prediction. Of the 10,069 walk-forward homes, 6
 
 ### Selection of the aged-system revision
 
-In the development comparison, the original v3 leaf20 model already used log PPSF and 10 remarks flags. Adding `remark_aged_system` alone lowered rolling MdAPE from 7.98% to 7.91% for June–November 2025. In the pooled fixed-origin evaluation, which forecast four months from each of the 2025-04-01 and 2025-08-01 origins, MdAPE rose from 8.08% to 8.11%. For the 766 homes whose remarks mentioned aged systems, MdAPE fell from 9.85% to 8.96%, and median signed error fell from +6.01% to +2.84%. The release retained the flag, with gains concentrated in this subgroup and the rolling development results. See the [model selection record](../MODEL_OVERVIEW.md).
+In the development comparison, the original v3 leaf20 model already used log PPSF and 10 remarks flags. Adding `remark_aged_system` alone lowered rolling MdAPE from 7.98% to 7.91% for June–November 2025. In the pooled fixed-origin evaluation, which forecast four months from each of the 2025-04-01 and 2025-08-01 origins, MdAPE rose from 8.08% to 8.11%. For the 766 homes whose remarks mentioned aged systems, MdAPE fell from 9.85% to 8.96%, and median signed error fell from +6.01% to +2.84%. The release retained the flag, with gains concentrated in this subgroup and the rolling development results. See the [aged-system development comparison](hgb_selection/hgb_v3_condition_flags/20261107T205351874945Z_b993abc0/summary.json).
 
 ## 5. Reproduction from scratch and verification
 

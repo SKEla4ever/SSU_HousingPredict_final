@@ -13,13 +13,19 @@ The comparison uses pooled errors on unrounded prices. Walk-forward refits at ea
 
 ## Reproduce the baseline comparison
 
-Use the same Python environment and official data snapshot as the [HGB workflow](../../README.md). From the package root, run:
+Use the same Python environment and official data snapshot as the [HGB workflow](../../README.md). Run the following commands from the package root. The loader downloads and caches the organizer's Parquet files by default.
 
 ```sh
-export DATA_DIR="$PWD/data"
+unset DATA_DIR
 export OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1
 python analysis/run_tree_baselines.py --phase holdout
 python analysis/run_tree_baselines.py --phase horizon
+```
+
+If you already have all three original Parquet files locally, replace `unset DATA_DIR` in the block above with the following line.
+
+```sh
+export DATA_DIR="/absolute/path/to/competition_data"
 ```
 
 The commands replay the tree families in the frozen comparison and write run-specific predictions, metrics and diagnostics under `outputs/tree_baselines/`. The holdout phase also scores the organizer's starter baselines. The [frozen settings](../../outputs/tree_baselines/frozen_config.json) preserve the original selection record and use file sizes and SHA-256 digests to identify the data snapshot. The development phase can repeat selection in a separate copy with no existing frozen configuration.

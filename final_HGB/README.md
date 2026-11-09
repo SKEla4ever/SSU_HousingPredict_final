@@ -43,9 +43,9 @@ These commands write to `outputs/`, `reports/`, `figures/` and `submissions/`. T
 ## Included material
 
 - [Official starter kit, handout, rubric and report template](official/README.md)
-- [Final v3 reproducibility report in Chinese](reports/V3_REPRODUCIBILITY_REPORT.md)
+- [Final v3 reproducibility report](reports/V3_REPRODUCIBILITY_REPORT.md)
 - [Final v3 slides brief in English](SLIDES_BRIEF.md)
 - [Walk-forward results](reports/validation_report.md) and [fixed-origin results](reports/horizon_report.json)
 - [HGB model-selection records](reports/hgb_selection/) from the archived experiments referenced in the brief
 - [Random Forest baseline reproduction and results](reports/rf_baseline/README.md)
-- [Round 1 report draft PDF](report/report_draft.pdf) and [LaTeX source](report/report_draft.tex)
+- [Round 1 report PDF](report/report.pdf) and [LaTeX source](report/report.tex)

@@ -32,4 +32,4 @@ python run.py check
 
 The handout specifies one PDF of at most four pages, submitted through the official form by November 8, 2026 at 11:59 p.m. EST. The PDF must include every team member's full name and the walk-forward MdAPE for each track, and link to both a YouTube video of up to five minutes and a GitHub repository containing the code and both submission CSVs. An unlisted video is acceptable. Give the organizers access to a private repository. [Submission instructions](starter/handout.md#what-to-submit)
 
-Fill in the team name, every member's full name, and the YouTube and GitHub URLs in the draft TeX. Recompile it and check that the links open before sending the PDF. The attached PDF is the compiled draft with placeholders. [Report source](../report/report_draft.tex) · [Draft PDF](../report/report_draft.pdf)
+Recompile the PDF after editing the source and verify that the YouTube and GitHub links open before submitting. [Report source](../report/report.tex) · [Round 1 report PDF](../report/report.pdf)
